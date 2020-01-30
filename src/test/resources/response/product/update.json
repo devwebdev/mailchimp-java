@@ -1,0 +1,10 @@
+{
+  "id" : "product_id",
+  "title" : "product_title",
+  "variants" : [ {
+    "id" : "product_variant_id",
+    "title" : "product_variant_title",
+    "price" : 3000,
+    "inventory_quantity" : 0
+  } ]
+}

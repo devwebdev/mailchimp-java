@@ -1,0 +1,20 @@
+{
+  "id" : "order_id",
+  "customer" : {
+    "id" : "customer_id",
+    "email_address" : "email_address",
+    "opt_in_status" : false,
+    "orders_count" : 0,
+    "total_spent" : 0
+  },
+  "lines" : [ {
+    "id" : "order_line_id",
+    "quantity" : 0,
+    "price" : 3000,
+    "discount" : 0
+  } ],
+  "order_total" : 0,
+  "discount_total" : 0,
+  "tax_total" : 0,
+  "shipping_total" : 0
+}
