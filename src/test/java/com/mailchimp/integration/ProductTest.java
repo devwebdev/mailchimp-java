@@ -19,7 +19,7 @@ public class ProductTest extends AbstractIntegrationTest {
         ProductVariant productVariant = new ProductVariant();
         productVariant.setId("product_variant_id");
         productVariant.setTitle("product_variant_title");
-        productVariant.setPrice(2990);
+        productVariant.setPrice(2990.0);
         ProductCreate product = ProductCreate.builder()
                 .setId("product_id")
                 .setTitle("product_title")
@@ -48,7 +48,7 @@ public class ProductTest extends AbstractIntegrationTest {
         ProductVariant productVariant = new ProductVariant();
         productVariant.setId("product_variant_id");
         productVariant.setTitle("product_variant_title");
-        productVariant.setPrice(2990);
+        productVariant.setPrice(2990.0);
         ProductCreate product = ProductCreate.builder()
                 .setId("product_id")
                 .setTitle("product_title")

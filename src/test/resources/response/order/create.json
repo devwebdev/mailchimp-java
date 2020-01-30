@@ -68,7 +68,7 @@
       "product_variant_id": "product_variant_id",
       "product_variant_title": "product_variant_title",
       "quantity": 1,
-      "price": 2990,
+      "price": 2990.0,
       "_links": [
         {
           "rel": "self",

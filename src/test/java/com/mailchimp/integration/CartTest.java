@@ -24,7 +24,7 @@ public class CartTest extends AbstractIntegrationTest {
                 .setCustomer(customer)
                 .setOrderTotal(5000L)
                 .setLines(Collections
-                        .singletonList(new CartLine("cart_line_id", "product_id", "product_variant_id", 1, 2990)))
+                        .singletonList(new CartLine("cart_line_id", "product_id", "product_variant_id", 1, 2990.0)))
                 .setCurrencyCode("HUF").build();
         expectPost("/3.0/ecommerce/stores/store_id/carts", "cart/create.json", "cart/create.json");
         // WHEN

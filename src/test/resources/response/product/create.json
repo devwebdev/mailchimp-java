@@ -4,7 +4,7 @@
   "variants" : [ {
     "id" : "product_variant_id",
     "title" : "product_variant_title",
-    "price" : 2990,
+    "price" : 2990.0,
     "inventory_quantity" : 0
   } ]
 }

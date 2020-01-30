@@ -10,13 +10,13 @@ public class CartLine {
     @JsonProperty("product_variant_id")
     private String productVariantId;
     private int quantity;
-    private long price;
+    private double price;
 
     public CartLine() {
     }
 
     public CartLine(final String id, final String productId, final String productVariantId, final int quantity,
-            final long price) {
+            final double price) {
         this.id = id;
         this.productId = productId;
         this.productVariantId = productVariantId;
@@ -60,11 +60,11 @@ public class CartLine {
         return this;
     }
 
-    public long getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public CartLine setPrice(final long price) {
+    public CartLine setPrice(final double price) {
         this.price = price;
         return this;
     }

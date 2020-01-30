@@ -8,7 +8,7 @@ public class ProductVariant {
     private String title;
     private String url;
     private String sku;
-    private int price;
+    private double price;
     @JsonProperty("inventory_quantity")
     private int inventoryQuantity;
     @JsonProperty("image_url")
@@ -52,11 +52,11 @@ public class ProductVariant {
         return this;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public ProductVariant setPrice(final int price) {
+    public ProductVariant setPrice(final double price) {
         this.price = price;
         return this;
     }

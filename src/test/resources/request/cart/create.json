@@ -10,7 +10,7 @@
   "lines" : [ {
     "id" : "cart_line_id",
     "quantity" : 1,
-    "price" : 2990,
+    "price" : 2990.0,
     "product_id" : "product_id",
     "product_variant_id" : "product_variant_id"
   } ],
