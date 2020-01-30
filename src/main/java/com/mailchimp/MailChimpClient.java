@@ -472,7 +472,7 @@ public interface MailChimpClient {
      * @throws MailChimpErrorException when storeId was not found
      */
     @RequestLine("GET /3.0/ecommerce/stores/{storeId}/orders")
-    Orders retrieveOrders(@Param("storeId") String storeId, OrdersQuery ordersQuery);
+    Orders retrieveOrders(@Param("storeId") String storeId, @QueryMap OrdersQuery ordersQuery);
 
     /**
      * Get order associated with the store and the given id.
