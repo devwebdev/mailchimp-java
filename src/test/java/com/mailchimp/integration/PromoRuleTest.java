@@ -48,7 +48,6 @@ public class PromoRuleTest extends AbstractIntegrationTest {
         assertNotNull(promoRule);
     }
 
-
     @Test
     public void testUpdatePromoRuleShouldMapTowardsMailChimp() throws IOException {
         // GIVEN

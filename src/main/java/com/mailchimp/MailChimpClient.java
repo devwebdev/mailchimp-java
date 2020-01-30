@@ -334,6 +334,52 @@ public interface MailChimpClient {
     Product create(@Param("storeId") String storeId, ProductCreate product);
 
     /**
+     * Creates an order.
+     * @param order the order to be created
+     * @return the created order
+     * @throws MailChimpErrorException when storeId was not found
+     */
+    @RequestLine("POST /3.0/ecommerce/stores/{storeId}/orders")
+    Order create(@Param("storeId") String storeId, OrderCreate order);
+
+    /**
+     * Removes a product by its id.
+     * @throws MailChimpErrorException when storeId was not found
+     * @throws MailChimpErrorException when productId was not found
+     */
+    @RequestLine("DELETE /3.0/ecommerce/stores/{storeId}/products/{productId}")
+    void removeProduct(@Param("storeId") String storeId, @Param("productId") String productId);
+
+    /**
+     * Removes a order by its id.
+     * @throws MailChimpErrorException when storeId was not found
+     * @throws MailChimpErrorException when orderId was not found
+     */
+    @RequestLine("DELETE /3.0/ecommerce/stores/{storeId}/orders/{orderId}")
+    void removeOrder(@Param("storeId") String storeId, @Param("orderId") String orderId);
+
+    /**
+     * Updates a specific product.
+     * @return the updated product
+     * @throws MailChimpErrorException when storeId was not found
+     * @throws MailChimpErrorException when productId was not found
+     */
+    @RequestLine("POST /3.0/ecommerce/stores/{storeId}/products/{productId}")
+    @Headers("X-HTTP-Method-Override: PATCH")
+    Product updateProduct(@Param("storeId") String storeId, @Param("productId") String productId,
+            ProductCreate product);
+
+    /**
+     * Updates a specific order.
+     * @return the updated order
+     * @throws MailChimpErrorException when storeId was not found
+     * @throws MailChimpErrorException when orderId was not found
+     */
+    @RequestLine("POST /3.0/ecommerce/stores/{storeId}/orders/{orderId}")
+    @Headers("X-HTTP-Method-Override: PATCH")
+    Order updateOrder(@Param("storeId") String storeId, @Param("orderId") String orderId, OrderCreate order);
+
+    /**
      * Removes store.
      * @param storeId id of store
      * @throws MailChimpErrorException when storeId was not found

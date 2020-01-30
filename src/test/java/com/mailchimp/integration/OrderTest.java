@@ -42,6 +42,7 @@ public class OrderTest extends AbstractIntegrationTest {
         expectPost("/3.0/ecommerce/stores/arandomid/orders", "order/create.json", "order/create.json");
         // WHEN
         Order created = mailChimpClient.createOrder("arandomid", cartCreate);
+
         // THEN
         assertNotNull(created);
     }
@@ -69,6 +70,7 @@ public class OrderTest extends AbstractIntegrationTest {
         List<Order> orderList = orders.getOrders();
         assertEquals(1, orderList.size());
         assertEquals("order_id", orderList.get(0).getId());
+
     }
 
 }
